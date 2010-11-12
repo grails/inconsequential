@@ -109,7 +109,7 @@ Thu Nov 11 16:54:08 &#91;websvr&#93; web admin <span class="java&#45;keyword">in
   <span class="java&#45;keyword">static</span> mapping = &#123;
     writeConcern WriteConcern.FSYNC_SAFE	
   &#125;	
-&#125;</pre></div><h1><a name="4. Low-level API">4. Low-level API</a></h1>A lower level API is provided by the plugin that is based on the <a href="../ref/Httpsgithubcompoiatigmongo/GMongo.html" class="https://github.com/poiati/gmongo">GMongo</a> project. An example of GMongo usage can be seen below:<p class="paragraph"/><div class="code"><pre>// Get a db reference in the old fashion way
+&#125;</pre></div><h1><a name="4. Low-level API">4. Low-level API</a></h1>A lower level API is provided by the plugin that is based on the <a href="http://github.com/poiati/gmongo" target="blank">GMongo</a> project. An example of GMongo usage can be seen below:<p class="paragraph"/><div class="code"><pre>// Get a db reference in the old fashion way
 def db = mongo.getDB(<span class="java&#45;quote">"gmongo"</span>)<p class="paragraph"/>// Collections can be accessed as a db property (like the javascript API)
 assert db.myCollection <span class="java&#45;keyword">instanceof</span> com.mongodb.DBCollection
 // They also can be accessed with array notation 
