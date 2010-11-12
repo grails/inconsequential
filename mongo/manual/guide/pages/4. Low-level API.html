@@ -1,7 +1,7 @@
 <html>
     <head>
         <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
-        <title>5. Low-level API</title>
+        <title>4. Low-level API</title>
         <link rel="stylesheet" href="../css/main.css" type="text/css" media="screen" title="Ref" charset="utf-8"/>
     </head>
     <body class="body">
@@ -18,11 +18,11 @@ db.languages &#60;&#60; &#91;name: 'Python'&#93;<p class="paragraph"/>// Insert 
 db.languages &#60;&#60; &#91;&#91;name: 'Javascript', type: 'prototyped'&#93;, &#91;name: 'Ioke', type: 'prototyped'&#93;&#93;</pre></div><p class="paragraph"/>
 To get hold of the <code>mongo</code> instance inside a controller or service simple define a <code>mongo</code> property:<p class="paragraph"/><div class="code"><pre>def mongo
 def myAction = &#123;
-	def db = mongo.getDB(<span class="java&#45;quote">"mongo"</span>)
-	db.languages.insert(&#91;name: 'Groovy'&#93;)	
+  def db = mongo.getDB(<span class="java&#45;quote">"mongo"</span>)
+  db.languages.insert(&#91;name: 'Groovy'&#93;)	
 &#125;</pre></div><p class="paragraph"/>A request scoped bean is also available for the default database (typically the name of your application, unless specified by the <code>databaseName</code> config option, plus the suffix "DB").<p class="paragraph"/><div class="code"><pre>def peopleDB
 def myAction = &#123;
-	peopleDB.languages.insert(&#91;name: 'Fred'&#93;)	
+  peopleDB.languages.insert(&#91;name: 'Fred'&#93;)	
 &#125;</pre></div><p class="paragraph"/>Each domain class you define also has a <code>collection</code> property that allows easy access to the underlying <code>DBCollection</code> instance and hence the GMongo API:<p class="paragraph"/><div class="code"><pre>Person.collection.count() == 1
 Person.collection.findOne(firstName:<span class="java&#45;quote">"Fred"</span>).lastName == <span class="java&#45;quote">"Flintstone"</span></pre></div><p class="paragraph"/>
     </body>

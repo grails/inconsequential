@@ -10,14 +10,14 @@ Thu Nov 11 16:54:08 db version v1.6.3, pdfile version 4.5
 Thu Nov 11 16:54:08 git version: 278bd2ac2f2efbee556f32c13c1b6803224d1c01
 Thu Nov 11 16:54:08 sys info: Darwin erh2.10gen.cc 9.6.0 Darwin Kernel Version 9.6.0: Mon Nov 24 17:37:00 PST 2008; root:xnu&#45;1228.9.59~1/RELEASE_I386 i386 BOOST_LIB_VERSION=1_40
 Thu Nov 11 16:54:08 &#91;initandlisten&#93; waiting <span class="java&#45;keyword">for</span> connections on port 27017
-Thu Nov 11 16:54:08 &#91;websvr&#93; web admin <span class="java&#45;keyword">interface</span> listening on port 28017</pre></div><p class="paragraph"/>As you can see the server is running on port 27017, but don't worry the Mongodb plugin for Grails will automatically configure itself to look for Mongodb on that port by default.<p class="paragraph"/>If you want to configure how Grails connects to Mongo then you can do so using the following settings in <code>grails-app/conf/Config.groovy</code>:<p class="paragraph"/><div class="code"><pre>grails &#123;
-	mongo &#123;
-		host = <span class="java&#45;quote">"localhost"</span>
-		port = 27107
-		username = <span class="java&#45;quote">"blah"</span>
-		password = <span class="java&#45;quote">"blah"</span>
-		databaseName = <span class="java&#45;quote">"foo"</span>
-	&#125;
+Thu Nov 11 16:54:08 &#91;websvr&#93; web admin <span class="java&#45;keyword">interface</span> listening on port 28017</pre></div><p class="paragraph"/>As you can see the server is running on port 27017, but don't worry the Mongodb plugin for Grails will automatically configure itself to look for Mongodb on that port by default.<p class="paragraph"/>If you want to configure how Grails connects to Mongo then you can do so using the following settings in <code>grails-app/conf/DataSource.groovy</code>:<p class="paragraph"/><div class="code"><pre>grails &#123;
+  mongo &#123;
+    host = <span class="java&#45;quote">"localhost"</span>
+    port = 27107
+    username = <span class="java&#45;quote">"blah"</span>
+    password = <span class="java&#45;quote">"blah"</span>
+    databaseName = <span class="java&#45;quote">"foo"</span>
+  &#125;
 &#125;</pre></div>
 
     </body>
