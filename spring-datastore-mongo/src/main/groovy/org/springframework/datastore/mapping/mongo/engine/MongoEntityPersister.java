@@ -333,7 +333,12 @@ public class MongoEntityPersister extends NativeEntryEntityPersister<DBObject, O
 
                 DBCollection dbCollection = con.getCollection(collectionName);
                 nativeEntry.put(MONGO_ID_FIELD, storeId);
+                MongoSession mongoSession = (MongoSession) session;
+                if (mongoSession.getWriteConcern() == null) {
                 dbCollection.insert(nativeEntry);
+                } else {
+                dbCollection.insert(nativeEntry, mongoSession.getWriteConcern());
+                }
 
                 return nativeEntry.get(MONGO_ID_FIELD);
 			}
